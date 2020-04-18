@@ -108,7 +108,7 @@ Note: Other type of keys, such as `recovery`, `resolver`, and `provider` of a DI
 ## Create (Register) <a name="create"></a>
 
 In order to create a `komsco` DID, a KOMSCO Identity Manager (KIM) smart contract, and KOMSCO Service Manager (KSM) smart contract must be deployed on KOMSCO blockchain.
-KIM is compliant with the EIP1484 [**[5]**](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1484.md) standard, and KSM is a default service key resolver.
+KIM is compliant with the * standard, and KSM is a default service key resolver.
 
 `komsco` DID creation is done by submitting a transaction to the KIM smart contract invoking the following method:
 ```
@@ -168,5 +168,3 @@ When a user creates and registers its own `komsco` DID in the KOMSCO blockchain,
 
  **[4]** https://www.iso.org/iso-8601-date-and-time-format.html
 
- **[5]** https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1484.md
- 
