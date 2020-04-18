@@ -75,7 +75,7 @@ did:komsco:123456789abcdefghi
 }
 ```
 
-* @context - (required) This is a JSON-LD keyword that points to the semantic schema of the document. This must point to https://w3id.org/did/v1, at least until a subsequent version of the context is created.
+* @context - (required) This is a JSON-LD keyword that points to the semantic schema of the document. 
 
 * id - (required) This is another JSON-LD keyword that signifies the value as a URL representing the surrounding object. Note that DIDs are URLs. We are using the lower 16 bytes of the initial public key as the identifier, since this will provide randomness tied to the document.
 
