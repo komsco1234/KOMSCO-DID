@@ -40,7 +40,7 @@ komsco-specific-idstring = komsco-network + ":" + KIN
 komsco-network = "mainnet" | "testnet"
 komsco-address = 40*HEXDIG
 ```
-The KIN is case-insensitive, but it is recommended to use mixed-case checksum for address encoding (see [**[3]**](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md)).
+The KIN is case-insensitive, but it is recommended to use mixed-case checksum for address encoding.
 
 ## Example <a name="example1"></a>
 
@@ -163,8 +163,6 @@ When a user creates and registers its own `komsco` DID in the KOMSCO blockchain,
  **[1]** https://w3c-ccg.github.io/did-spec/
 
  **[2]** https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/did-primer.md
-
- **[3]** https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md
 
  **[4]** https://www.iso.org/iso-8601-date-and-time-format.html
 
