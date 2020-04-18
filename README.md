@@ -95,7 +95,7 @@ The definition of the `komsco` JSON-LD context is:
 ```
 # CRUD Operation Definitions <a name="crud"></a>
 
-## Create (Register) <a name="create"></a>
+## Create <a name="create"></a>
 
 In order to create a `komsco` DID, a KOMSCO Identity Manager (KIM) smart contract, and KOMSCO Service Manager (KSM) smart contract must be deployed on KOMSCO blockchain.
 KIM is compliant with the * standard, and KSM is a default service key resolver.
@@ -106,7 +106,7 @@ function createIdentity(address recoveryAddress, address[] memory providers, add
 ```
 This will generate the corresponding id-string (KIN) and assign control to the caller address. Identities are denominated  by KINs, which are unique but otherwise uninformative.
 
-## Read (Resolve) <a name="read"></a>
+## Read <a name="read"></a>
 
 To construct a valid DID document from an `komsco` DID, the following steps are performed:
 
@@ -130,7 +130,7 @@ The DID Document may be updated by invoking the relevant KSM smart contract func
 function addKey(address _key, uint KIN, bytes name)
 function removeKey(address _key, uint KIN)
 ```
-## Delete (Revoke) <a name="delete"></a>
+## Delete <a name="delete"></a>
 
 Revoking the DID can be supported by executing a `destructIdentity` operation that is part of the KIM smart contract. This will remove the KIM and KSM's storage and code from the state, effectively marking the DID as revoked.
 ```
