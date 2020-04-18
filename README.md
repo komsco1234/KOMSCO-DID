@@ -119,7 +119,3 @@ When a user creates and registers its own `komsco` DID in the KOMSCO Trusted Pla
 
  **[1]** https://w3c-ccg.github.io/did-spec/
 
- **[2]** https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/did-primer.md
-
- **[3]** https://www.iso.org/iso-8601-date-and-time-format.html
-
