@@ -89,24 +89,15 @@ did:komsco:123456789abcdefghi
 
 ## Create <a name="create"></a>
 
-In order to create a `komsco` DID, a KOMSCO Identity Manager (KIM) smart contract, and KOMSCO Service Manager (KSM) smart contract must be deployed on KOMSCO blockchain.
-KIM is compliant with the * standard, and KSM is a default service key resolver.
-
-`komsco` DID creation is done by submitting a transaction to the KIM smart contract invoking the following method:
-```
-function createIdentity(address recoveryAddress, address[] memory providers, address[] memory resolvers) public returns (uint KIN);
-```
-This will generate the corresponding id-string (KIN) and assign control to the caller address. Identities are denominated  by KINs, which are unique but otherwise uninformative.
+The DID Documents are cryptographically signed and sent to the KOMSCO Trusted Platform, where their signatures are checked and subsequently stored on the blockchain ledger. The ledger contains smart contracts that verify that the DID Documents are well-formed, that there are no ID conflicts, and checks the cryptographic signature against the rest of the DID Document, before writing it to the ledger.
 
 ## Read <a name="read"></a>
 
-The DID Documents are cryptographically signed and sent to the Workday Credentialing Platform, where their signatures are checked and subsequently stored on the blockchain ledger. 
-
-The ledger contains smart contracts that verify that the DID Documents are well-formed, that there are no ID conflicts, and checks the cryptographic signature against the rest of the DID Document, before writing it to the ledge
+A GET request to the https://credentials.id.workday.com/v1/did/{did}' endpoint with a DID returns the DID Document corresponding to this DID. Behind the scenes, the Workday Credentialing Platform queries the ledger and returns the DID Document, if it exists.
 
 ## Update <a name="update"></a>
 
-A GET request to the https://credentials.id.workday.com/v1/did/{did} endpoint with a DID returns the DID Document corresponding to this DID. Behind the scenes, the Workday Credentialing Platform queries the ledger and returns the DID Document, if it exists.
+A GET request to the ` https://credentials.id.workday.com/v1/did/{did}` endpoint with a DID returns the DID Document corresponding to this DID. Behind the scenes, the Workday Credentialing Platform queries the ledger and returns the DID Document, if it exists.
 
 ## Delete <a name="delete"></a>
 
