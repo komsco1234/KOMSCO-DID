@@ -95,7 +95,7 @@ The DID Documents are cryptographically signed and sent to the KOMSCO Trusted Pl
 
 ## Read <a name="read"></a>
 
-A GET request to the ` https://credentials.id.workday.com/v1/did/{did}` endpoint with a DID returns the DID Document corresponding to this DID. Behind the scenes, the KOMSCO Trusted Platform queries the ledger and returns the DID Document, if it exists.
+A GET request to the `https://komsco-did.herokuapp.com/v1/did/{did}` endpoint with a DID returns the DID Document corresponding to this DID. Behind the scenes, the KOMSCO Trusted Platform queries the ledger and returns the DID Document, if it exists.
 
 ## Update <a name="update"></a>
 
