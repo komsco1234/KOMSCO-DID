@@ -33,7 +33,7 @@ A DID that uses this method MUST begin with the following prefix: `did:komsco`. 
 
 # Method Specific Identifier <a name="identifier"></a>
 
-The method specific identifier is composed of an optional KOMSCO network identifier with a `:` separator, followed by a Hex-encoded KOMSCO Identifier Number (KIN) (without a `0x` prefix).
+The method specific identifier is composed of a Hex-encoded KOMSCO Identifier Number (KIN) (without a `0x` prefix).
 ```
 komsco-did = "did:komsco:" + <first 16-bytes of public key w/ b58 encoding>
 ```
@@ -49,28 +49,27 @@ did:komsco:123456789abcdefghi
 ```
 {
 	"@context": "https://w3id.org/did/v1",
-	"id": "did:komsco:testnet:0000000000000000000000000000000000000000000000000000",
-	"created": "2020-04-18T12:00:00Z",
-	"updated": "2020-04-18T12:00:00Z",
+	"id": "did:komsco:123456789abcdefghi",
+	
 	"publicKey": [{
-		"id": "#KomscoManagementKey#1",
+		"id": "did:komsco:123456789abcdefghi",
 		"type": "Secp256k1VerificationKey2020",
 		"publicKeyHash": "e3FA89810623759d53361a297305c391c8280e66"
 	       },
 	       {
-		"id": "#KomscoServiceKey#1",
+		"id": "did:komsco:223456789abcdefghi",
 		"type": "Secp256k1VerificationKey2020",
 		"publicKeyHash": "5A0b54D5dc17e0AadC383d2db43B0a0D3E029c4c"
 	       }
 	],
 	"authentication": [{
-		"id": "#KomscoManagementKey#1",
+		"id": "did:komsco:323456789abcdefghi",
 		"type": "Secp256k1VerificationKey2020",
 		"publicKeyHex": "034f355bdcb7cc0af728ef3cc...59ab0f0b704075871aa"
 	       }
 	],
 	"service": [{
-		"id": "#KomscoManagementKey#1",
+		"id": "did:komsco:323456789abcdefghi",
 		"type": "DIDHub",
 		"serviceEndpoint": "https://komsco-did.herokuapp.com/"
 	       }
