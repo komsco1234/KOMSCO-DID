@@ -1,6 +1,6 @@
 KOMSCO DID Method Specification
 =================
-8th July 2019
+18th April 2020
 
 # Table of Contents
 1. [DID Method Name](#name)
