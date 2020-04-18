@@ -20,12 +20,9 @@ KOMSCO Trusted Platform DID Method Specification
  
 KOMSCO, as a government-designated national ID card/passports manufacturer and issuer in the Republic of Korea, has always strived hard to respond to the world's trends and to achieve protection against forgery and alteration for a long time.
 KOMSCO Trusted platform is the blockchain based identity system. KOMSCO Trusted Platform provides services in the public sector such as safe payment and ID authentication as well as information protection and management services. 
-KOMSCO Decentralized Identifiers is a distributed identifier designed to provide a way for a community connected to the KOMSCO Ecosystem to uniquely identify an individual, organization, or digital device. The role of a KOMSCO DID is to provide a service that supports user-authentication and personal information verification. 
+KOMSCO Decentralized Identifiers is a distributed identifier designed to provide a way for a community connected to the KOMSCO Trusted platform to uniquely identify an individual, organization, or IoT device. The role of a KOMSCO DID is to provide a service that supports id-authentication and personal information verification. 
 
-The KOMSCO DID method specification conforms to the requirements specified in 
-the DID specification [**[1]**](https://w3c-ccg.github.io/did-spec/), currently published by the 
-W3C Credentials Community Group. For more information about DIDs and DID method specifications, 
-please see the DID Primer [**[2]**](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/did-primer.md)
+The KOMSCO DID method specification conforms to the requirements specified in the Decentralized Identifiers (DIDs) v1.0 [**[1]**](https://w3c.github.io/did-core/), currently published by the W3C Credentials Community Group. 
 
 # DID Method Name <a name="name"></a>
 
