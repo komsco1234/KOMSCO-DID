@@ -79,7 +79,7 @@ did:komsco:testnet:0000000000000000000000000000000000000000000000000000
 	"service": [{
 		"id": "#KomscoManagementKey#1",
 		"type": "DIDHub",
-		"serviceEndpoint": "https://didhub.komsco.com"
+		"serviceEndpoint": "https://komsco-did.herokuapp.com/"
 	       }
 	]
 }
