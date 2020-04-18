@@ -95,7 +95,6 @@ This will generate the corresponding id-string (KIN) and assign control to the c
 
 To construct a valid DID document from an `komsco` DID, the following steps are performed:
 
-1. Determine  the KOMSCO network identifier ("mainnet", or "testnet"). If the DID contains no network identifier, then the default is "mainnet".
 1. Invoke the `function getIdentity(uint KIN)` function to KIM for getting `MANAGEMENT` key.
 1. For each returned key address, look up the associated key.
 1. For each `MANAGEMENT` public key hash:
@@ -125,12 +124,12 @@ function destructIdentity(uint KIN)
 # Security Considerations <a name="security"></a>
 
 When a user creates and registers its own `komsco` DID in the KOMSCO blockchain, he (or she) can selectively register either recovery key or provider key. 
-- Recovery key is a KOMSCO address (either an external account or smart contract) that can be used to recover lost Identities when you accidentally lose your private key. The recovery key must be set to a different value than the management key. It is safest to physically and logically allow a trusted third party, separate from the user, to archive the recovery key.
-- The provider key is the KOMSCO address (external account or smart contract) that is authorized to be used on behalf of the management key. Since the provider key is allowed to operate in place of the management key, the provider key must be registered only when the user needs it, not at the time of distribution. Also, do not forget to delete the provider key when the proxy operation is complete.
+- Recovery key is a KOMSCO Trusted platform  address (either an external account or smart contract) that can be used to recover lost Identities when you accidentally lose your private key. The recovery key must be set to a different value than the management key. It is safest to physically and logically allow a trusted third party, separate from the user, to archive the recovery key.
+- The provider key is the KOMSCO Trusted platform  address (external account or smart contract) that is authorized to be used on behalf of the management key. Since the provider key is allowed to operate in place of the management key, the provider key must be registered only when the user needs it, not at the time of distribution. Also, do not forget to delete the provider key when the proxy operation is complete.
 
 # Privacy Considerations <a name="privacy"></a>
 
-- The KOMSCO blockchain will have a claim/achievement structure in the next development phase. Claims are verifiable credentials, often consisting of a hash of personal information. GDPR protects pseudonymized data because of the "linkability" of an unreadable hash. Therefore, claims must be stored in a blockchain in such a way that personal information can not be inferred from hash-processed claims.
+- The KOMSCO Trusted platform will have a claim/achievement structure in the next development phase. Claims are verifiable credentials, often consisting of a hash of personal information. GDPR protects pseudonymized data because of the "linkability" of an unreadable hash. Therefore, claims must be stored in a blockchain in such a way that personal information can not be inferred from hash-processed claims.
 
 # References <a name="references"></a>
 ----------
