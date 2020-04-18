@@ -55,23 +55,18 @@ did:komsco:123456789abcdefghi
 	"publicKey": [{
 		"id": "did:komsco:123456789abcdefghi",
 		"type": "Secp256k1VerificationKey2020",
+		"owner": "did:komsco:223456789abcdefghi",
 		"publicKeyHash": "e3FA89810623759d53361a297305c391c8280e66"
-	       },
-	       {
-		"id": "did:komsco:223456789abcdefghi",
-		"type": "Secp256k1VerificationKey2020",
-		"publicKeyHash": "5A0b54D5dc17e0AadC383d2db43B0a0D3E029c4c"
-	       }
-	],
-	"authentication": [{
+	       }],
+
+	"authentication": [
 		"id": "did:komsco:323456789abcdefghi",
-		"type": "Secp256k1VerificationKey2020",
-		"publicKeyHex": "034f355bdcb7cc0af728ef3cc...59ab0f0b704075871aa"
-	       }
+	],
+	"proof": [
+		"id": "did:komsco:323456789abcdefghi",
 	],
 	"service": [{
-		"id": "did:komsco:323456789abcdefghi",
-		"type": "DIDHub",
+		"type": "Schema",
 		"serviceEndpoint": "https://komsco-did.herokuapp.com/"
 	       }
 	]
