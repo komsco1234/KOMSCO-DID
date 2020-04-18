@@ -20,7 +20,9 @@ KOMSCO Trusted Platform DID Method Specification
  
 # Abstract <a name="abstract"></a>
 KOMSCO, as a government-designated national ID card/passports manufacturer and issuer in the Republic of Korea, has always strived hard to respond to the world's trends and to achieve protection against forgery and alteration for a long time.
+
 KOMSCO Trusted platform is the blockchain based identity system. KOMSCO Trusted Platform provides services in the public sector such as safe payment and ID authentication as well as information protection and management services. 
+
 KOMSCO Decentralized Identifiers is a distributed identifier designed to provide a way for a community connected to the KOMSCO Trusted platform to uniquely identify an individual, organization, or IoT device. The role of a KOMSCO DID is to provide a service that supports id-authentication and personal information verification. 
 
 The KOMSCO DID method specification conforms to the requirements specified in the Decentralized Identifiers (DIDs) v1.0 [**[1]**](https://w3c.github.io/did-core/), currently published by the W3C Credentials Community Group. 
@@ -34,7 +36,7 @@ A DID that uses this method MUST begin with the following prefix: `did:komsco`. 
 
 # Method Specific Identifier <a name="identifier"></a>
 
-The method specific identifier is composed of a Hex-encoded KOMSCO Identifier Number (KIN) (without a `0x` prefix).
+The method specific identifier is composed of a first 16-bytes of public key w/ b58 encoding.
 ```
 komsco-did = "did:komsco:" + <first 16-bytes of public key w/ b58 encoding>
 ```
@@ -97,20 +99,16 @@ A GET request to the ` https://credentials.id.workday.com/v1/did/{did}` endpoint
 
 ## Update <a name="update"></a>
 
-A GET request to the ` https://credentials.id.workday.com/v1/did/{did}` endpoint with a DID returns the DID Document corresponding to this DID. Behind the scenes, the Workday Credentialing Platform queries the ledger and returns the DID Document, if it exists.
+In the current implementation, DID Documents are immutable, and cannot be updated. Future enhancements will enable support for key rotations, revocations, and service changes
 
 ## Delete <a name="delete"></a>
 
-Revoking the DID can be supported by executing a `destructIdentity` operation that is part of the KIM smart contract. This will remove the KIM and KSM's storage and code from the state, effectively marking the DID as revoked.
-```
-function destructIdentity(uint KIN)
-```
+In the current implementation, DID Documents are immutable, and cannot be deleted. Future enhancements will enable support for key rotations, revocations, and service changes
+
 
 # Security Considerations <a name="security"></a>
 
-When a user creates and registers its own `komsco` DID in the KOMSCO blockchain, he (or she) can selectively register either recovery key or provider key. 
-- Recovery key is a KOMSCO Trusted platform  address (either an external account or smart contract) that can be used to recover lost Identities when you accidentally lose your private key. The recovery key must be set to a different value than the management key. It is safest to physically and logically allow a trusted third party, separate from the user, to archive the recovery key.
-- The provider key is the KOMSCO Trusted platform  address (external account or smart contract) that is authorized to be used on behalf of the management key. Since the provider key is allowed to operate in place of the management key, the provider key must be registered only when the user needs it, not at the time of distribution. Also, do not forget to delete the provider key when the proxy operation is complete.
+When a user creates and registers its own `komsco` DID in the KOMSCO Trusted Platform, he (or she) can selectively register either recovery key or provider key. 
 
 # Privacy Considerations <a name="privacy"></a>
 
