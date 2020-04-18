@@ -1,4 +1,4 @@
-KOMSCO DID Method Specification
+KOMSCO Trusted Platform DID Method Specification
 =================
 18th April 2020
 
@@ -18,7 +18,7 @@ KOMSCO DID Method Specification
 7. [Privacy](#privacy)
 8. [References](#references)
 
-KOMSCO is the next-generation identity system powered by blockchain technology. KOMSCO Decentralized Identifiers is a distributed identifier designed to provide a way for a community connected to the KOMSCO Ecosystem to uniquely identify an individual, organization, or digital device. The role of a KOMSCO DID is to provide a service that supports user-authentication and personal information verification. 
+KOMSCO Trusted flatform is the next-generation identity system powered by blockchain technology. KOMSCO Decentralized Identifiers is a distributed identifier designed to provide a way for a community connected to the KOMSCO Ecosystem to uniquely identify an individual, organization, or digital device. The role of a KOMSCO DID is to provide a service that supports user-authentication and personal information verification. 
 
 The KOMSCO DID method specification conforms to the requirements specified in 
 the DID specification [**[1]**](https://w3c-ccg.github.io/did-spec/), currently published by the 
