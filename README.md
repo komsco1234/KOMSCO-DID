@@ -83,8 +83,7 @@ did:komsco:123456789abcdefghi
 
 * service - An array of ServiceEndpoint objects that aid in service discovery. Service endpoints are optional; 
 
-
-proof - An array of Proof objects containing cryptographic signatures over the contents of the rest of the DID Document, together metadata about the signature. The smart contract verifies the signature before storing the DID Document on the ledger.
+* proof - An array of Proof objects containing cryptographic signatures over the contents of the rest of the DID Document, together metadata about the signature. The smart contract verifies the signature before storing the DID Document on the ledger.
 
 # CRUD Operation Definitions <a name="crud"></a>
 
@@ -101,27 +100,14 @@ This will generate the corresponding id-string (KIN) and assign control to the c
 
 ## Read <a name="read"></a>
 
-To construct a valid DID document from an `komsco` DID, the following steps are performed:
+The DID Documents are cryptographically signed and sent to the Workday Credentialing Platform, where their signatures are checked and subsequently stored on the blockchain ledger. 
 
-1. Invoke the `function getIdentity(uint KIN)` function to KIM for getting `MANAGEMENT` key.
-1. For each returned key address, look up the associated key.
-1. For each `MANAGEMENT` public key hash:
-	1. Add a `publicKey` element of type `Secp256k1VerificationKey2020` and `KomscoManagementKey` to the DID Document.
-    1. Add an `authentication` element of type `Secp256k1VerificationKey2020`, referencing this `publicKey`.
-1. Invoke the `function getKeys(uint KIN)` function to KSM for getting  for `SERVICE` key.
-1. For each `SERVICE` public key hash:
-	1. Add a `publicKey` element of type `Secp256k1VerificationKey2020` and `KomscoServiceKey` to the DID Document.
-	1. Add an `service` element of type  `Secp256k1VerificationKey2020`, referencing this `publicKey`.
-
-Note: Service endpoints and other elements of a DID Document may be supported in future versions of this specification.
+The ledger contains smart contracts that verify that the DID Documents are well-formed, that there are no ID conflicts, and checks the cryptographic signature against the rest of the DID Document, before writing it to the ledge
 
 ## Update <a name="update"></a>
 
-The DID Document may be updated by invoking the relevant KSM smart contract functions as follows:
-```
-function addKey(address _key, uint KIN, bytes name)
-function removeKey(address _key, uint KIN)
-```
+A GET request to the https://credentials.id.workday.com/v1/did/{did} endpoint with a DID returns the DID Document corresponding to this DID. Behind the scenes, the Workday Credentialing Platform queries the ledger and returns the DID Document, if it exists.
+
 ## Delete <a name="delete"></a>
 
 Revoking the DID can be supported by executing a `destructIdentity` operation that is part of the KIM smart contract. This will remove the KIM and KSM's storage and code from the state, effectively marking the DID as revoked.
