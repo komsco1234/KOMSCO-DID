@@ -9,15 +9,14 @@ KOMSCO Trusted Platform DID Method Specification
     1. [Example](#example1)
 4. [DID Document](#document)
     1. [Example](#example2)
-5. [JSON-LD Context Definition](#ld)
-6. [CRUD Operation Definitions](#crud)
+5. [CRUD Operation Definitions](#crud)
     1. [Create (Register)](#create)
     2. [Read (Resolve)](#read)
     3. [Update](#update)
     4. [Delete](#delete)
-7. [Security Considerations](#security)
-8. [Privacy Considerations](#privacy)
-9. [References](#references)
+6. [Security Considerations](#security)
+7. [Privacy Considerations](#privacy)
+8. [References](#references)
  
 # Abstract <a name="abstract"></a>
 KOMSCO, as a government-designated national ID card/passports manufacturer and issuer in the Republic of Korea, has always strived hard to respond to the world's trends and to achieve protection against forgery and alteration for a long time.
@@ -79,20 +78,6 @@ did:komsco:123456789abcdefghi
 }
 ```
 
-# JSON-LD Context Definition <a name="ld"></a>
-
-The `komsco` method defines additional JSON-LD terms for the supported KOMSCO key types `MANAGEMENT`, and `SERVICE`.
-
-The definition of the `komsco` JSON-LD context is:
-```
-{
-	"@context":
-	{
-		"KomscoManagementKey": "{TBA}",
-		"KomscoServiceKey": "{TBA}"
-	}
-}
-```
 # CRUD Operation Definitions <a name="crud"></a>
 
 ## Create <a name="create"></a>
