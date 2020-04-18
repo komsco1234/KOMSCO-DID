@@ -74,10 +74,16 @@ did:komsco:123456789abcdefghi
 ```
 
 @context - (required) This is a JSON-LD keyword that points to the semantic schema of the document. This must point to https://w3id.org/did/v1, at least until a subsequent version of the context is created.
+
 id - (required) This is another JSON-LD keyword that signifies the value as a URL representing the surrounding object. Note that DIDs are URLs. We are using the lower 16 bytes of the initial public key as the identifier, since this will provide randomness tied to the document.
+
 publicKey - An array of PublicKey objects that represent the public keys that can validate this identity. Proofs on Verified Credentials and Proof Responses will reference the id of the key used to perform the signing.
-authentication - Another array of PublicKey objects that represents identities associated with this DID Document. PublicKeys defined exclusively in the authentication section will only be used for authenticating the association to this DID Document for update purposes. This is useful for allowing a 2nd party, such as Workday, to help in key recovery.
-service - An array of ServiceEndpoint objects that aid in service discovery. Service endpoints are optional; although in Workday, we plan to always include ID Hubs.
+
+authentication - Another array of PublicKey objects that represents identities associated with this DID Document. PublicKeys defined exclusively in the authentication section will only be used for authenticating the association to this DID Document for update purposes. 
+
+service - An array of ServiceEndpoint objects that aid in service discovery. Service endpoints are optional; 
+
+
 proof - An array of Proof objects containing cryptographic signatures over the contents of the rest of the DID Document, together metadata about the signature. The smart contract verifies the signature before storing the DID Document on the ledger.
 
 # CRUD Operation Definitions <a name="crud"></a>
