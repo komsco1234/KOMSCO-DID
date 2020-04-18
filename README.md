@@ -3,20 +3,21 @@ KOMSCO Trusted Platform DID Method Specification
 18th April 2020
 
 # Table of Contents
-1. [DID Method Name](#name)
-2. [Method Specific Identifier](#identifier)
+1. [Abstract](#abstract)
+2. [DID Method Name](#name)
+3. [Method Specific Identifier](#identifier)
     1. [Example](#example1)
-3. [DID Document](#document)
+4. [DID Document](#document)
     1. [Example](#example2)
-4. [JSON-LD Context Definition](#ld)
-5. [CRUD Operation Definitions](#crud)
+5. [JSON-LD Context Definition](#ld)
+6. [CRUD Operation Definitions](#crud)
     1. [Create (Register)](#create)
     2. [Read (Resolve)](#read)
     3. [Update](#update)
     4. [Delete](#delete)
-6. [Security Considerations](#security)
-7. [Privacy Considerations](#privacy)
-8. [References](#references)
+7. [Security Considerations](#security)
+8. [Privacy Considerations](#privacy)
+9. [References](#references)
  
 KOMSCO, as a government-designated national ID card/passports manufacturer and issuer in the Republic of Korea, has always strived hard to respond to the world's trends and to achieve protection against forgery and alteration for a long time.
 KOMSCO Trusted platform is the blockchain based identity system. KOMSCO Trusted Platform provides services in the public sector such as safe payment and ID authentication as well as information protection and management services. 
