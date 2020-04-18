@@ -14,8 +14,8 @@ KOMSCO Trusted Platform DID Method Specification
     2. [Read (Resolve)](#read)
     3. [Update](#update)
     4. [Delete](#delete)
-6. [Security](#security)
-7. [Privacy](#privacy)
+6. [Security Considerations](#security)
+7. [Privacy Considerations](#privacy)
 8. [References](#references)
  
 KOMSCO, as a government-designated national ID card/passports manufacturer and issuer in the Republic of Korea, has always strived hard to respond to the world's trends and to achieve protection against forgery and alteration for a long time.
