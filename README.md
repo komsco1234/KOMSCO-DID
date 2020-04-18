@@ -23,7 +23,8 @@ KOMSCO Trusted platform is the blockchain based identity system. KOMSCO Trusted 
 KOMSCO Decentralized Identifiers is a distributed identifier designed to provide a way for a community connected to the KOMSCO Trusted platform to uniquely identify an individual, organization, or IoT device. The role of a KOMSCO DID is to provide a service that supports id-authentication and personal information verification. 
 
 The KOMSCO DID method specification conforms to the requirements specified in the Decentralized Identifiers (DIDs) v1.0 [**[1]**](https://w3c.github.io/did-core/), currently published by the W3C Credentials Community Group. 
-
+For more information about DIDs and DID method specifications, please see the DID Spec and the DID Primer.
+ 
 # DID Method Name <a name="name"></a>
 
 The namestring that shall identify this DID method is: `komsco`
@@ -34,20 +35,13 @@ A DID that uses this method MUST begin with the following prefix: `did:komsco`. 
 
 The method specific identifier is composed of an optional KOMSCO network identifier with a `:` separator, followed by a Hex-encoded KOMSCO Identifier Number (KIN) (without a `0x` prefix).
 ```
-komsco-did = "did:komsco:" + komsco-specific-idstring
-komsco-specific-idstring = komsco-network + ":" + KIN
-komsco-network = "mainnet" | "testnet"
-komsco-address = 40*HEXDIG
+komsco-did = "did:komsco:" + <first 16-bytes of public key w/ b58 encoding>
 ```
-The KIN is case-insensitive, but it is recommended to use mixed-case checksum for address encoding.
-
 ## Example <a name="example1"></a>
 
 Example `komsco` DIDs:
 ```
-did:komsco:0000000000000000000000000000000000000000000000000000
-did:komsco:mainnet:0000000000000000000000000000000000000000000000000000
-did:komsco:testnet:0000000000000000000000000000000000000000000000000000
+did:komsco:123456789abcdefghi
 ```
 # DID Document <a name="document"></a>
 
