@@ -64,13 +64,14 @@ did:komsco:123456789abcdefghi
 	       }],
 
 	"authentication": [
-		"id": "did:komsco:323456789abcdefghi",
+		"id": "did:komsco:123456789abcdefghi",
 	],
 	"proof": [
-		"id": "did:komsco:323456789abcdefghi",
+		"id": "did:komsco:123456789abcdefghi",
 	],
 	"service": [{
-		"type": "Schema",
+	        "id": "did:komsco:123456789abcdefghi",
+		"type": "VerifiableCredentialService",
 		"serviceEndpoint": "https://komsco-did.herokuapp.com/"
 	       }
 	]
