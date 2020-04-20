@@ -58,7 +58,7 @@ did:komsco:123456789abcdefghi
 	
 	"publicKey": [{
 		"id": "did:komsco:123456789abcdefghi",
-		"type": "Secp256k1VerificationKey2020",
+		"type": "Secp256k1VerificationKey2019",
 		"owner": "did:komsco:223456789abcdefghi",
 		"publicKeyHash": "e3FA89810623759d53361a297305c391c8280e66"
 	       }],
